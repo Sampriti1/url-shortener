@@ -5,27 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      body{
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: aliceblue;
-    }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <h1>URL Shortener</h1>
+<body class="homee">
+  <div class="home1">
+    <h1 id="homeheader">URL Shortener</h1>
     <% if(locals.id){  %>
-       <p>URL Generated: http://localhost:8001/url/<%= id %> </p>
+     <div class="url-container">  <p id="urlgenerated">URL Generated:</p> <p id="urllink">http://localhost:8001/url/<%= id %> </p></div>
 
    <% }%>
-    <div>
+    <div class="url">
         <form method="POST" action="/url">
-            <label>Enter the original URL</label>
+            <label id="og">Enter the original URL</label>
             <input type="text" name="url" placeholder="https://example.com">
-            <button type="submit">Generate</button>
+            <button type="submit" id="gen">Generate</button>
         </form>
     </div>
-    <div>
+    <div class="clicks">
         <% if(locals.urls){ %>
         <table>
       <thead>
@@ -49,7 +45,7 @@
         </table>
          <% } %>
     </div>
-    
+    </div>
     
 </body>
 </html>

@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    </style>
+   <link rel="stylesheet" href = "/style.css">
+       
 </head>
-<body>
-    <h1>Login</h1>
+<body class="body1">
+   <div class="login"> <h1>Login</h1>
     <form action ="/user/login" method="post">
-        <label>Email</label>
-        <input type="text" required name="email">
-        <label>Password</label>
-        <input type="text" required name="password">
-        <button type="submit">Login</button>
+        <label id="email">Email</label><br>
+        <input type="text" required name="email"><br>
+        <label id="password">Password</label><br>
+        <input type="text" required name="password"><br>
+        <div id="bu">
+        <button type="submit" id="b">Login</button>
+   </div>
+   </div>
     </form>
+    <div class="newuser">
+    <p>New user? <a href="/signup" ><button type="button" id="submitb">Sign up</a> </button>   </p>
+   
+</div>
+
 </body>
 </html>

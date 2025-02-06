@@ -17,13 +17,14 @@ async function handleUserLogin(req,res) {
  console.log("User", user)
  if(!user) return res.render('login',{
   error: "Invalid Username or password",
- })
- //if everything of the user is correct then it will generate a session id
-  const sessionId = uuidv4();
-  setUser(sessionId, user);
-  res.cookie("uid", sessionId) //here we created cookies and name of the cookie is uid and we will send this cookie as response to the user to give him the uid
-  return res.render("home"); // "/" means the home route i.e., the home page
-  }
+ });
+ 
+  const token = setUser(user);
+  res.cookie("token", token)
+  return res.render("home");
+
+
+}
   
   
 
