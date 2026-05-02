@@ -1,0 +1,141 @@
+.body1{
+    background-image:url("/urlimage.png");
+    background-size: cover;
+    background-position: center;
+    background-color:rgb(182, 211, 220); 
+    background-blend-mode: overlay; 
+}
+.login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 3px solid black;
+
+    
+    margin: 150px auto;
+    padding: 20px;
+    padding-bottom: 120px;
+    max-width: 400px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:black;
+    background-color:lightblue;
+    
+    
+    
+   
+    
+}
+
+.newuser{
+    margin-top:-20vmin;
+    
+    
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#email{
+    font-size: 20px;
+    font-weight:500;
+    color: black;
+    
+   
+}
+#password{
+    font-size: 20px;
+    font-weight: 500;
+    color:black
+}
+#b{
+    font-size:20px;
+    color: black;
+    font-weight: bold;
+    
+}
+#bu{
+    padding-top: 35px;
+}
+#submitb{
+   font-size: 20px;
+   font-weight: bold;
+}
+.signup{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 3px solid black;
+    font-size:18px;
+    
+    margin: 150px auto;
+    padding: 20px;
+    padding-bottom: 120px;
+    max-width: 400px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:black;
+    background-color:white;
+}
+.b33{
+    background-image:url("/urlimage.png");
+    background-size: cover;
+    background-position: center;
+    background-color:rgb(182, 211, 220); 
+    background-blend-mode: overlay; 
+}
+#button2{
+    font-size:20px;
+    color: black;
+    font-weight:200;
+    
+}
+#button2d{
+    padding-top: 20px;
+}
+@media(max-width: 1600px){
+.home1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    align-items: center;
+    padding-bottom: 80vmin;
+    padding-left: 69vmin;
+   
+}
+#homeheader{
+    padding-left: 12vmin;
+   
+  
+}
+#urlgenerated {
+    margin-right: 20px;
+    padding-left: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#urllink {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-left: -3px; 
+}
+
+.url-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+#og{
+    font-weight:600;
+}
+#gen{
+    font-weight: 600;
+}
+.homee{
+    background-image: url("/urlimage.png");
+    background-size: cover;
+    background-position: center;
+    background-color:rgb(246, 249, 250); 
+    background-blend-mode: overlay; 
+}
+}
