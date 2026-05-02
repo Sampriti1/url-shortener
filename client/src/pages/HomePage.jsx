@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
-axios.defaults.baseURL = 'http://localhost:8001';
+
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 axios.defaults.withCredentials = true;
 
 function HomePage() {
@@ -38,7 +39,7 @@ function HomePage() {
         setShortenedUrl('');
         try {
             const response = await axios.post('/url', { url });
-            setShortenedUrl(`http://localhost:8001/url/${response.data.id}`);
+            setShortenedUrl(`${import.meta.env.VITE_BACKEND_URL}/url/${response.data.id}`)
             setUrl('');
             fetchUserUrls();
         } catch (err) {
@@ -174,7 +175,7 @@ function HomePage() {
                 <tr key={link.shortId} style={{ borderBottom: '1px solid #333' }}>
                   <td style={{ padding: '10px' }}>
                     <a
-                      href={`http://localhost:8001/url/${link.shortId}`}
+                      href={`${import.meta.env.VITE_BACKEND_URL}/url/${link.shortId}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: '#6caff5' }}

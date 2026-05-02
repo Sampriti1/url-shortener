@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-axios.defaults.baseURL = 'http://localhost:8001';
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 axios.defaults.withCredentials = true;
 
 const StatCard = ({ title, value }) => (
@@ -85,7 +85,7 @@ function AnalyticsPage() {
                     <tbody>
                         {stats.topLinks.map(link => (
                             <tr key={link.shortId}>
-                                <td style={{ padding: '12px' }}><a href={`http://localhost:8001/url/${link.shortId}`} target="_blank" rel="noopener noreferrer" style={{ color: '#6caff5' }}>{link.shortId}</a></td>
+                                <td style={{ padding: '12px' }}><a href={`${import.meta.env.VITE_BACKEND_URL}/url/${link.shortId}`} target="_blank" rel="noopener noreferrer" style={{ color: '#6caff5' }}>{link.shortId}</a></td>
                                 <td style={{ padding: '12px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '400px' }}>{link.redirectURL}</td>
                                 <td style={{ padding: '12px' }}>{link.clicks}</td>
                             </tr>

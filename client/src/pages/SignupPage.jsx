@@ -15,7 +15,7 @@ function SignupPage() {
     setLoading(true);
     setError('');
     try {
-      await axios.post('http://localhost:8001/user', { name, email, password });
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/user`, { name, email, password });
       navigate('/login'); 
     } catch (err) {
       setError('Failed to create account. Email may be in use.');
